@@ -2,19 +2,19 @@
 
 ## 미리 보기
 
-압축을 풀고 `index.html`을 더블클릭하면 메인 홈페이지를 볼 수 있습니다. 상단 **CV** 탭에서 전체 이력 페이지(`cv.html`)로 이동합니다. 별도의 프로그램 설치가 필요 없습니다. `styles.css`, `assets` 폴더는 `index.html`과 같은 폴더에 두세요. `assets` 폴더에는 프로필 사진과 나중에 다시 활용할 실험 그래프가 들어 있습니다. 현재 홈페이지에는 프로필 사진과 Education의 GT·SNU 로고를 표시합니다.
+압축을 풀고 `index.html`을 더블클릭하면 메인 홈페이지를 볼 수 있습니다. 상단 **CV** 탭에서 전체 이력 페이지(`cv.html`)로 이동합니다. 별도의 프로그램 설치가 필요 없습니다. `styles.css`, `cv.css`, `assets` 폴더는 `index.html`과 같은 폴더에 두세요. 현재 홈페이지에는 프로필 사진, 두 핵심 연구의 그림, GT·SNU 로고를 표시합니다.
 
 ## GitHub에 게시하기
 
-1. GitHub에 `yerinnn0` 계정으로 로그인합니다.
-2. `yerinnn0.github.io` 저장소가 이미 있는지 확인합니다. 기존 홈페이지가 있다면 먼저 백업하세요.
-3. 없다면 이름을 `yerinnn0.github.io`로 지정하고 **Public** 저장소를 만듭니다.
-4. 저장소에서 파일 업로드를 선택하고, 압축을 푼 폴더 **안의 파일들**을 올립니다. ZIP이나 상위 폴더 자체를 올리지 마세요. `index.html`, `cv.html`, `styles.css`, `assets` 폴더가 저장소 첫 화면에 보여야 합니다. `assets` 폴더도 통째로 업로드해야 사진과 그래프가 표시됩니다.
+1. GitHub에 `yerinkim-yk` 계정으로 로그인합니다.
+2. `yerinkim-yk.github.io` 저장소가 이미 있는지 확인합니다. 기존 홈페이지가 있다면 먼저 백업하세요.
+3. 없다면 이름을 `yerinkim-yk.github.io`로 지정하고 **Public** 저장소를 만듭니다.
+4. 저장소에서 파일 업로드를 선택하고, 압축을 푼 폴더 **안의 파일들**을 올립니다. ZIP이나 상위 폴더 자체를 올리지 마세요. `index.html`, `cv.html`, `styles.css`, `cv.css`, `assets` 폴더가 저장소 첫 화면에 보여야 합니다. `assets` 폴더도 통째로 업로드해야 사진과 그래프가 표시됩니다.
 5. 숨김 폴더인 **`.github`**도 빠짐없이 업로드합니다. Mac Finder에서 **Command + Shift + .**으로 숨김 파일을 표시할 수 있습니다. `.github/workflows/pages.yml`은 홈페이지 게시에 사용됩니다. 기본 브랜치는 `main`으로 설정합니다.
 6. **Settings → Pages → Build and deployment → Source**에서 **GitHub Actions**를 선택합니다.
 7. **Actions → Publish homepage → Run workflow**를 선택합니다. 두 작업이 모두 성공하면 Pages 설정의 **Visit site**에서 홈페이지를 확인합니다. 이후 파일 변경 시 홈페이지가 다시 게시되며 인용 수는 자동으로 바뀌지 않습니다.
 
-게시 성공 후 사용할 주소: `https://yerinnn0.github.io/`
+게시 성공 후 사용할 주소: `https://yerinkim-yk.github.io/`
 
 현재 전달된 파일은 게시 준비가 된 초안이며, 실제 GitHub 업로드나 공개 배포가 완료된 상태는 아닙니다.
 
@@ -31,7 +31,7 @@
 - 학교 이메일, GitHub, Google Scholar, LinkedIn 프로필 링크
 - 모바일에서도 바로 보이는 텍스트 메뉴와 화면 크기에 맞춰 조정되는 레이아웃
 
-첨부 이력서의 전화번호와 원본 PDF는 웹사이트에 포함하지 않았습니다. Research와 Industry Experience의 설명을 이력서 기준으로 보완했습니다. 최근 연구 2개와 ABB 경험에는 핵심 기여를 bullet로 덧붙이고, 오래된 경험은 짧게 정리했습니다. 상세 설명·그림 펼침 영역은 나중에 다시 작성할 수 있도록 현재 화면에서 뺐습니다. 원본 그래프 파일은 보관했습니다.
+첨부 이력서의 전화번호와 원본 PDF는 웹사이트에 포함하지 않았습니다. Home은 연구 정체성, 최근 연구 두 건의 짧은 설명과 그림, 논문, 업데이트를 앞에 두도록 구성했습니다. Industry Experience와 Education은 간결하게 정리했고, Teaching·Honors·Coursework·Skills는 CV에서 확인할 수 있습니다.
 
 ## 확인 상태
 
@@ -57,7 +57,7 @@ Education의 각 학력 항목 왼쪽에 학교 공식 사이트의 로고를 �
 
 ## 메인 / CV 구분
 
-- **Home (`index.html`)**: 소개, 연구 프로젝트, 논문, 산업체 경력, 학력, 기술 역량. 연구 설명은 기존 상세 내용을 유지하고, ABB·Blux 경력에는 이력서에 근거한 핵심 기여 bullet을 보강했습니다. 오래된 DSME 경험은 짧게 유지합니다.
+- **Home (`index.html`)**: 연구 정체성, 핵심 연구 프로젝트, 논문, 업데이트, 간결한 산업체 경력과 학력. Skills는 표시하지 않습니다.
 - **CV (`cv.html`)**: 간결한 연구·경력 설명, 논문, 학력, 교육·아웃리치, 수상·장학금, 분야별 대학원 수강 과목, 연락처가 포함됩니다. 이름·소속·사진·프로필 링크는 남기고 소개글은 뺐습니다.
 
 상단 Home/CV 탭으로 두 페이지를 이동할 수 있습니다. 공유되는 논문·학력·기간 등을 수정할 때에는 두 페이지를 함께 반영해 주세요. GitHub 게시 시 두 HTML 파일을 모두 올려야 합니다.

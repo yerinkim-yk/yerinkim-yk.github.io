@@ -1,200 +1,194 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Yerin Kim is a Ph.D. student in Electrical and Computer Engineering at Georgia Tech. Research in autonomous decision-making, control, optimization, and robotics.">
-  <meta name="theme-color" content="#ffffff">
-  <meta property="og:title" content="Yerin Kim | Georgia Tech">
-  <meta property="og:description" content="Research, publications, and experience in autonomous decision-making, control, optimization, and robotics.">
-  <meta property="og:type" content="website">
-  <title>Yerin Kim | Georgia Tech</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%231d5d91'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' text-anchor='middle' fill='white'%3EYK%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <nav id="navigation" aria-label="Main navigation">
-      <a href="index.html" aria-current="page">Home</a><a href="#research">Research</a><a href="#publications">Publications</a><a href="#work">Experience</a><a href="#about">Education</a><a href="cv.html">CV</a>
-    </nav>
-  </header>
-  <main id="main">
-    <section class="introduction" id="home" aria-labelledby="name">
-      <div class="profile-header">
-        <div class="profile-identity">
-          <h1 id="name">Yerin Kim</h1>
-          <p class="position">Ph.D. Student · Electrical &amp; Computer Engineering<br>Georgia Institute of Technology</p>
-          <div class="profile-links" aria-label="Contact and profiles"><a href="mailto:yerinkim@gatech.edu">Email</a><a href="https://scholar.google.com/citations?user=Wx4iFFQAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a><a href="https://github.com/yerinnn0" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/yerinkimyk" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
-        </div>
-        <img class="portrait" src="assets/yerin-kim.jpg" width="300" height="374" alt="Yerin Kim" fetchpriority="high">
-      </div>
-      <div class="biography-copy">
-        <p>I am a Ph.D. student at Georgia Tech, advised by <a href="https://ece.gatech.edu/directory/matthew-hale" target="_blank" rel="noopener noreferrer">Prof. Matthew Hale</a> in the <a href="https://corelab.ece.gatech.edu/" target="_blank" rel="noopener noreferrer">Control, Optimization, and Robotics Engineering (CORE) Lab</a>.</p>
-        <p>My research focuses on <strong>autonomous decision-making, control, and optimization</strong>, particularly how multi-agent systems balance competing objectives. I develop policies and controllers that account for adversarial inference while maintaining task performance.</p>
-        <p>Previously, I worked on robotic perception at ABB Robotics and machine learning recommendation systems at Blux. I received my B.S. in Naval Architecture and Ocean Engineering from Seoul National University.</p>
-      </div>
-    </section>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Yerin Kim — Ph.D. student researching autonomous decision-making, control, optimization, and multi-agent systems.">
+    <title>Yerin Kim | Research</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Yerin Kim home">YK</a>
+      <nav aria-label="Primary navigation">
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#updates">Updates</a>
+        <a href="#background">Background</a>
+        <a class="nav-cv" href="cv.html">CV</a>
+      </nav>
+    </header>
 
-    <section class="section" id="research" aria-labelledby="research-heading">
-      <h2 id="research-heading">Research Projects</h2>
-      <article class="research-entry">
-        <h3>Deception in Discrete-Time Linear-Quadratic Control</h3>
-        <p class="entry-meta">Georgia Tech · CORE Lab · Aug 2025–present</p>
-        <p>Developed deceptive controllers for discrete-time linear-quadratic systems under adversarial detection constraints using sequential hypothesis testing.</p>
-        <ul class="entry-highlights">
-          <li>Derived semi-explicit optimal controllers with well-posedness guarantees.</li>
-          <li>Developed analytical and Monte Carlo methods to characterize the probability of detection.</li>
+    <main id="top">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-identity">
+          <div>
+            <h1 id="page-title">Yerin Kim</h1>
+            <p class="affiliation">Ph.D. Student, Electrical and Computer Engineering<br>Georgia Institute of Technology</p>
+            <p class="advisor">Advised by <a href="https://ece.gatech.edu/directory/matthew-hale" target="_blank" rel="noreferrer">Prof. Matthew Hale</a> · <a href="https://corelab.ece.gatech.edu/" target="_blank" rel="noreferrer">CORE Lab</a></p>
+          </div>
+          <img class="portrait" src="assets/yerin-kim.jpg" alt="Portrait of Yerin Kim">
+        </div>
+
+        <div class="hero-copy">
+          <p class="research-statement">I study autonomous decision-making in settings where agents must reason about control performance, uncertainty, and the inferences made by others.</p>
+          <p>I am interested in control and optimization for multi-agent systems, with current work on deception and information-aware decision-making. My research asks how policies and controllers can balance system objectives with what an observer learns from their behavior.</p>
+          <p class="contact-links">
+            <a href="mailto:yerin.kim@gatech.edu">Email</a>
+            <a href="https://scholar.google.com/citations?user=Wx4iFFQAAAAJ&amp;hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
+            <a href="https://github.com/yerinkim-yk" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/yerinkimyk" target="_blank" rel="noreferrer">LinkedIn</a>
+          </p>
+        </div>
+      </section>
+
+      <section id="research" class="section research-section" aria-labelledby="research-heading">
+        <div class="section-heading">
+          <p class="eyebrow">Research</p>
+          <h2 id="research-heading">Current directions</h2>
+        </div>
+
+        <div class="featured-research">
+          <article class="research-card">
+            <div class="research-card-heading">
+              <p class="card-kicker">LQ Control &middot; Sequential Hypothesis Testing</p>
+              <h3>Deception in Discrete-Time Linear-Quadratic Control</h3>
+            </div>
+            <div class="research-card-details">
+              <div class="research-card-copy">
+              <p>How can a controller retain strong performance while making its behavior harder for an observer to identify? This work studies deceptive controllers for discrete-time linear-quadratic systems under adversarial detection constraints, uses sequential hypothesis testing, and characterizes the resulting tradeoff.</p>
+              <p class="project-links"><a href="https://arxiv.org/abs/2604.00227" target="_blank" rel="noreferrer">Paper</a></p>
+              </div>
+              <figure class="research-visual">
+                <img src="assets/lq-detection.png" alt="Detection-performance result for linear-quadratic control research">
+              </figure>
+            </div>
+          </article>
+
+          <article class="research-card">
+            <div class="research-card-heading">
+              <p class="card-kicker">Markov Decision Process &middot; Inverse Reinforcement Learning &middot; Moving Target Defense</p>
+              <h3>Metrics and Tactics for Deception in Sequential Decision Systems</h3>
+            </div>
+            <div class="research-card-details">
+              <div class="research-card-copy">
+              <p>This research develops regularized policy-optimization formulations for deception in multi-agent Markov decision processes against inverse-reinforcement-learning adversaries. It examines diversionary, targeted, and equivocal strategies and their effect on both task performance and an observer’s inference.</p>
+              <p class="project-links"><a href="https://arxiv.org/abs/2501.18803" target="_blank" rel="noreferrer">Paper</a><a href="https://github.com/yerinkim-yk/DeceptionMTD" target="_blank" rel="noreferrer">Code</a></p>
+              </div>
+              <figure class="research-visual">
+                <img src="assets/deception-estimation-framework.png" alt="Diagram showing the deception and estimation framework for sequential decision systems">
+              </figure>
+            </div>
+          </article>
+        </div>
+
+        <div class="earlier-research" aria-label="Additional research projects">
+          <p class="eyebrow">Additional projects</p>
+          <article>
+            <h3>MPC-Based Block-Lifting Control of Floating Cranes</h3>
+            <p>Model-predictive control for suspended blocks on floating cranes operating in waves.</p>
+          </article>
+          <article>
+            <h3>Design of Distributed SVM Algorithm using Blended Dynamics Approach</h3>
+            <p>Distributed support-vector-machine design using a blended-dynamics approach.</p>
+          </article>
+          <article>
+            <h3>Simultaneous Localization and Mapping (SLAM) of Robots</h3>
+            <p>Robot localization and map construction under sensing uncertainty.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="publications" class="section publications" aria-labelledby="publications-heading">
+        <div class="section-heading">
+          <p class="eyebrow">Publications</p>
+          <h2 id="publications-heading">Selected work</h2>
+        </div>
+        <ol class="publication-list">
+          <li>
+            <p class="publication-title"><a href="https://arxiv.org/abs/2604.00227" target="_blank" rel="noreferrer">Deception in Linear-Quadratic Control</a></p>
+            <p><strong>Y. Kim</strong>, H. Zhou, A. Benvenuti, R. Hu, and M. Hale.</p>
+            <p class="venue">arXiv preprint, 2026 · <span class="citation-count">3 citations</span></p>
+          </li>
+          <li>
+            <p class="publication-title"><a href="https://doi.org/10.1093/jcde/qwag068" target="_blank" rel="noreferrer">Hybrid multibody dynamics-based model predictive control of suspended blocks for floating cranes in waves</a></p>
+            <p>H. Lee, M. I. Roh, and <strong>Y. Kim</strong>.</p>
+            <p class="venue">Journal of Computational Design and Engineering, 13(8), 2026.</p>
+          </li>
+          <li>
+            <p class="publication-title"><a href="https://arxiv.org/abs/2501.18803" target="_blank" rel="noreferrer">Deceptive sequential decision-making via regularized policy optimization</a></p>
+            <p><strong>Y. Kim</strong>, A. Benvenuti, B. Chen, M. Karabag, A. Kulkarni, N. D. Bastian, U. Topcu, and M. Hale.</p>
+            <p class="venue">arXiv preprint, 2025 · <span class="citation-count">7 citations</span> · <a href="https://github.com/yerinkim-yk/DeceptionMTD" target="_blank" rel="noreferrer">Code</a></p>
+          </li>
+          <li>
+            <p class="publication-title"><a href="https://ieeexplore.ieee.org/document/10773660" target="_blank" rel="noreferrer">Defining and measuring deception in sequential decision systems: Application to network defense</a></p>
+            <p><strong>Y. Kim</strong>, A. Benvenuti, B. Chen, M. Karabag, A. Kulkarni, N. D. Bastian, U. Topcu, and M. Hale.</p>
+            <p class="venue">IEEE Military Communications Conference (MILCOM), 2024 · <span class="citation-count">9 citations</span></p>
+          </li>
+          <li>
+            <p class="publication-title"><a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11027646" target="_blank" rel="noreferrer">Development of Distributed Support Vector Machine Algorithm Using Blended Dynamics</a></p>
+            <p><strong>Y. Kim</strong>, Y. Kim, and D. Shim.</p>
+            <p class="venue">Journal of the Institute of Electronics and Information Engineers, 59(2), 2022.</p>
+          </li>
+        </ol>
+        <p class="publication-note">Citation counts reflect the Google Scholar profile snapshot supplied in October 2026.</p>
+      </section>
+
+      <section id="updates" class="section updates" aria-labelledby="updates-heading">
+        <div class="section-heading">
+          <p class="eyebrow">Updates</p>
+          <h2 id="updates-heading">Recent milestones</h2>
+        </div>
+        <ul class="update-list">
+          <li><time datetime="2026-08">Aug 2026</time><span>Completed an Agentic AI internship with ABB Robotics.</span></li>
+          <li><time datetime="2026">2026</time><span><em>Deception in Linear-Quadratic Control</em> became available as an arXiv preprint.</span></li>
+          <li><time datetime="2024">2024</time><span>Presented <em>Defining and measuring deception in sequential decision systems</em> at IEEE MILCOM.</span></li>
         </ul>
-      </article>
-      <article class="research-entry">
-        <h3>Metrics and Tactics for Deception in Sequential Decision Systems</h3>
-        <p class="entry-meta">Georgia Tech · CORE Lab · May 2024–Feb 2026</p>
-        <p>Developed regularized policy-optimization formulations for three forms of deception in multi-agent Markov decision processes (MDPs) against inverse reinforcement learning (IRL) adversaries.</p>
-        <ul class="entry-highlights">
-          <li>Derived formal bounds on the performance loss induced by deception.</li>
-          <li>Evaluated three deception strategies in a five-agent MDP with over 248,000 joint state-action pairs using three IRL methods.</li>
-        </ul>
-      </article>
-      <article class="research-entry">
-        <h3>MPC-Based Block-Lifting Control of Floating Cranes</h3>
-        <p class="entry-meta">Seoul National University · Mar 2021–Jun 2022</p>
-        <p>Formulated constrained model predictive control for underactuated floating-crane block lifting under marine disturbances, with online disturbance compensation using next-step disturbance prediction.</p>
-      </article>
-      <article class="research-entry">
-        <h3>Design of Distributed SVM Algorithm using Blended Dynamics Approach</h3>
-        <p class="entry-meta">Seoul National University · Apr–Dec 2021</p>
-        <p>Proposed a consensus-based distributed SVM algorithm for private, online learning. Derived a distributed optimization method for the dual SVM and validated convergence behavior in MATLAB.</p>
-      </article>
-      <article class="research-entry">
-        <h3>Simultaneous Localization and Mapping (SLAM) of Robots</h3>
-        <p class="entry-meta">Seoul National University · Aug 2020–Feb 2021</p>
-        <p>Implemented LiDAR-based graph SLAM in Python using scan matching, loop closure, and pose-graph optimization to estimate robot trajectories and reconstruct environment maps.</p>
-      </article>
-    </section>
+      </section>
 
-    <section class="section" id="publications" aria-labelledby="publications-heading">
-      <h2 id="publications-heading">Publications</h2>
-      <p class="section-note"><a href="https://scholar.google.com/citations?user=Wx4iFFQAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a> · Citation counts recorded <time datetime="2026-10-02">October 2, 2026</time>.</p>
-      <ol class="publication-list">
-        <li>
-          <span class="pub-year">2026</span>
-          <div class="publication-body">
-            <h3 class="publication-title"><a href="https://arxiv.org/abs/2604.00227" target="_blank" rel="noopener noreferrer">Deception in Linear-Quadratic Control</a></h3>
-            <p class="authors"><strong>Yerin Kim</strong>, Haosheng Zhou, Alexander Benvenuti, Ruimeng Hu, Matthew Hale</p>
-            <p class="venue">arXiv:2604.00227</p>
-            <div class="publication-links"><span class="publication-status">Preprint</span><a class="paper-link" href="https://arxiv.org/abs/2604.00227" target="_blank" rel="noopener noreferrer" aria-label="arXiv: Deception in Linear-Quadratic Control">arXiv</a><span class="citation-count" aria-label="3 Google Scholar citations, recorded October 2, 2026">3 citations</span></div>
+      <section id="background" class="section background" aria-labelledby="background-heading">
+        <div class="section-heading">
+          <p class="eyebrow">Background</p>
+          <h2 id="background-heading">Industry and education</h2>
+        </div>
+        <div class="background-grid">
+          <div>
+            <h3 class="subheading">Industry experience</h3>
+            <article class="compact-entry">
+              <img class="company-logo abb" src="assets/abb-logo.svg" alt="ABB logo">
+              <div><h4>ABB Robotics · Agentic AI Intern</h4><p>AI Robotics Lab · May–Aug 2026</p></div>
+            </article>
+            <article class="compact-entry">
+              <img class="company-logo" src="assets/blux-logo.svg" alt="Blux logo">
+              <div><h4>Blux · Project Manager &amp; ML Engineer</h4><p>Jul 2022–Jun 2023</p></div>
+            </article>
+            <article class="compact-entry">
+              <img class="company-logo dsme" src="assets/dsme-logo.png" alt="DSME logo">
+              <div><h4>DSME · R&amp;D Intern</h4><p>Jul 2020</p></div>
+            </article>
           </div>
-        </li>
-<li>
-          <span class="pub-year">2026</span>
-          <div class="publication-body">
-            <h3 class="publication-title"><a href="https://doi.org/10.1093/jcde/qwag068" target="_blank" rel="noopener noreferrer">Hybrid multibody dynamics-based model predictive control of suspended blocks for floating cranes in waves</a></h3>
-            <p class="authors">Hyewon Lee, Myung-Il Roh, <strong>Yerin Kim</strong></p>
-            <p class="venue">Journal of Computational Design and Engineering, 13(8), 52–70 · qwag068</p>
-            <div class="publication-links"><span class="publication-status">Journal article</span><a class="paper-link" href="https://doi.org/10.1093/jcde/qwag068" target="_blank" rel="noopener noreferrer" aria-label="Article: Hybrid multibody dynamics-based model predictive control">Article</a></div>
+          <div>
+            <h3 class="subheading">Education</h3>
+            <article class="compact-entry education-entry">
+              <img class="school-logo" src="assets/georgia-tech-logo.png" alt="Georgia Tech logo">
+              <div><h4>Georgia Institute of Technology</h4><p>Ph.D., Electrical and Computer Engineering · 2023–2028 (expected)</p></div>
+            </article>
+            <article class="compact-entry education-entry">
+              <img class="school-logo" src="assets/snu-logo.png" alt="Seoul National University logo">
+              <div><h4>Seoul National University</h4><p>B.S., Naval Architecture and Ocean Engineering · Minor in Science and Technology Studies · 2017–2022</p></div>
+            </article>
           </div>
-        </li>
-<li>
-          <span class="pub-year">2025</span>
-          <div class="publication-body">
-            <h3 class="publication-title"><a href="https://arxiv.org/abs/2501.18803" target="_blank" rel="noopener noreferrer">Deceptive Sequential Decision-Making via Regularized Policy Optimization</a></h3>
-            <p class="authors"><strong>Yerin Kim</strong>, Alexander Benvenuti, Bo Chen, Mustafa Karabag, Abhishek Kulkarni, Nathaniel D. Bastian, Ufuk Topcu, Matthew Hale</p>
-            <p class="venue">arXiv:2501.18803</p>
-            <div class="publication-links"><span class="publication-status">Preprint · Revised 2026</span><a class="paper-link" href="https://arxiv.org/abs/2501.18803" target="_blank" rel="noopener noreferrer" aria-label="arXiv: Deceptive Sequential Decision-Making via Regularized Policy Optimization">arXiv</a><a class="paper-link" href="https://github.com/yerinnn0/DeceptionMTD" target="_blank" rel="noopener noreferrer" aria-label="GitHub code: Deceptive Sequential Decision-Making via Regularized Policy Optimization">GitHub</a><span class="citation-count" aria-label="7 Google Scholar citations, recorded October 2, 2026">7 citations</span></div>
-          </div>
-        </li>
-<li>
-          <span class="pub-year">2024</span>
-          <div class="publication-body">
-            <h3 class="publication-title"><a href="https://ieeexplore.ieee.org/document/10773660" target="_blank" rel="noopener noreferrer">Defining and Measuring Deception in Sequential Decision Systems: Application to Network Defense</a></h3>
-            <p class="authors"><strong>Yerin Kim</strong>, Alexander Benvenuti, Bo Chen, Mustafa Karabag, Abhishek Kulkarni, Nathaniel D. Bastian, Ufuk Topcu, et al.</p>
-            <p class="venue">MILCOM 2024 – IEEE Military Communications Conference · pp. 1–6</p>
-            <div class="publication-links"><span class="publication-status">Conference paper · Oral presentation</span><a class="paper-link" href="https://ieeexplore.ieee.org/document/10773660" target="_blank" rel="noopener noreferrer" aria-label="IEEE Xplore: Defining and Measuring Deception in Sequential Decision Systems: Application to Network Defense">IEEE Xplore</a><span class="citation-count" aria-label="9 Google Scholar citations, recorded October 2, 2026">9 citations</span></div>
-          </div>
-        </li>
-      </ol>
-      <h3 class="group-heading">Earlier conference work</h3>
-      <ol class="publication-list">
-        <li>
-          <span class="pub-year">2021</span>
-          <div class="publication-body">
-            <h4 class="publication-title"><a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11027646" target="_blank" rel="noopener noreferrer">Design of Distributed Support Vector Machine Algorithm using Blended Dynamics Approach</a></h4>
-            <p class="authors"><strong>Yerin Kim</strong>, Jeong Woo Kim, Hyungbo Shim</p>
-            <p class="venue">Autumn Annual Conference of the Institute of Electronics and Information Engineers · pp. 528–530</p>
-            <div class="publication-links"><span class="publication-status">Conference paper · Oral presentation</span><a class="paper-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11027646" target="_blank" rel="noopener noreferrer" aria-label="DBpia: Design of Distributed Support Vector Machine Algorithm using Blended Dynamics Approach">DBpia</a></div>
-          </div>
-        </li>
-      </ol>
-    </section>
+        </div>
+      </section>
 
-    <section class="section" id="work" aria-labelledby="work-heading">
-      <h2 id="work-heading">Industry Experience</h2>
-      <article class="experience-entry company-entry">
-        <div class="company-logo-wrap"><img class="company-logo" src="assets/abb-logo.svg" width="882" height="350" loading="lazy" alt="ABB logo"></div>
-        <div class="company-content">
-        <div class="entry-heading"><h3>ABB Robotics</h3><p class="entry-date">May–Aug 2026</p></div>
-        <p class="entry-role">Agentic AI Intern, AI Robotics Lab <span class="location">· Milpitas, CA</span></p>
-        <p>Developed an end-to-end perception pipeline for robotic pick-and-place, integrating object detection, classification, segmentation, and pick-point generation.</p>
-        <ul class="entry-highlights">
-          <li>Trained and evaluated four vision models, testing labeling strategies and generalization to unseen items.</li>
-          <li>Compared specialized and foundation vision models on task-specific accuracy, computational cost, and human-in-the-loop effort to guide model selection.</li>
-          <li>Conducted a proof-of-concept study of V-JEPA2 video representations for early robotic-failure detection, assessing classification performance and detection timing.</li>
-        </ul>
-        </div>
-      </article>
-      <article class="experience-entry company-entry">
-        <div class="company-logo-wrap"><img class="company-logo" src="assets/blux-logo.svg" width="800" height="400" loading="lazy" alt="Blux logo"></div>
-        <div class="company-content">
-        <div class="entry-heading"><h3>Blux</h3><p class="entry-date">Jul 2022–Jun 2023</p></div>
-        <p class="entry-role">Project Manager &amp; ML Engineer <span class="location">· Seoul, South Korea</span></p>
-        <p>Implemented a Transformer-based, prompt-driven offline RL recommender for sequential next-item prediction, with tunable rewards for user behavior.</p>
-        <ul class="entry-highlights">
-          <li>Led delivery from data collection and model development through deployment, using sequential user behavior and production data to guide improvements.</li>
-          <li>Achieved a statistically significant increase in purchase conversion in client-run A/B testing.</li>
-        </ul>
-        </div>
-      </article>
-      <article class="experience-entry company-entry">
-        <div class="company-logo-wrap"><img class="company-logo" src="assets/dsme-logo.png" width="701" height="161" loading="lazy" alt="DSME logo"></div>
-        <div class="company-content">
-        <div class="entry-heading"><h3>Daewoo Shipbuilding &amp; Marine Engineering</h3><p class="entry-date">Jul 2020</p></div>
-        <p class="entry-role">R&amp;D Intern, Smart-ship Solutions Team <span class="location">· Siheung, South Korea</span></p>
-        <p>Implemented collision-free ship path planning with Dijkstra and A* in C#, and built a simulation framework for evaluation.</p>
-        </div>
-      </article>
-    </section>
+      <section class="cv-callout" aria-label="Curriculum vitae">
+        <p>For complete research, experience, coursework, teaching, and honors, see my <a href="cv.html">curriculum vitae</a>.</p>
+      </section>
+    </main>
 
-    <section class="section" id="about" aria-labelledby="education-heading">
-      <h2 id="education-heading">Education</h2>
-      <article class="education-entry">
-        <div class="education-logo-wrap"><img class="education-logo" src="assets/georgia-tech-logo.png" width="972" height="972" loading="lazy" alt="Georgia Tech logo"></div>
-        <div class="education-content">
-        <div class="entry-heading"><h3>Georgia Institute of Technology</h3><p class="entry-date">Aug 2023–expected Aug 2028</p></div>
-        <p>Ph.D. in Electrical and Computer Engineering</p>
-        <p class="entry-meta">Graduate Research Assistant, CORE Lab · Advisor: Prof. Matthew Hale</p>
-        </div>
-      </article>
-      <article class="education-entry">
-        <div class="education-logo-wrap"><img class="education-logo education-logo-snu" src="assets/snu-logo.png" width="2116" height="2195" loading="lazy" alt="Seoul National University emblem"></div>
-        <div class="education-content">
-        <div class="entry-heading"><h3>Seoul National University</h3><p class="entry-date">Mar 2017–Aug 2022</p></div>
-        <p>B.S. in Naval Architecture and Ocean Engineering<br>Minor in Science and Technology Studies</p>
-        <p class="entry-meta">Summa Cum Laude · GPA 4.08 / 4.3</p>
-        </div>
-      </article>
-    </section>
-
-    <section class="section" id="skills" aria-labelledby="skills-heading">
-      <h2 id="skills-heading">Methods &amp; Tools</h2>
-      <dl class="skills-list">
-        <div><dt>Programming</dt><dd>Python, C#, MATLAB</dd></div>
-        <div><dt>Machine learning &amp; robotics</dt><dd>PyTorch, TensorFlow, computer vision, SLAM, RL, IRL</dd></div>
-        <div><dt>Autonomy &amp; control</dt><dd>MDPs, MPC, optimal control, multi-agent systems</dd></div>
-        <div><dt>Optimization &amp; software</dt><dd>CVXPY, Gurobi, Git, Linux</dd></div>
-      </dl>
-    </section>
-  </main>
-  <footer class="site-footer"><span>© 2026 Yerin Kim</span><a href="#home">Back to top</a></footer>
-</body>
+    <footer><p>© 2026 Yerin Kim</p></footer>
+  </body>
 </html>
