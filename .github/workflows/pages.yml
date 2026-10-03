@@ -20,8 +20,7 @@ jobs:
       - name: Prepare public files
         run: |
           mkdir -p _site
-          cp index.html cv.html styles.css .nojekyll _site/
-          cp googleabfa54314b022609.html _site/
+          cp index.html cv.html styles.css cv.css .nojekyll _site/
           cp -R assets _site/assets
       - uses: actions/upload-pages-artifact@v4
         with:
