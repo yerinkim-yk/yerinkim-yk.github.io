@@ -79,7 +79,7 @@ figcaption { margin-top: 8px; color: var(--muted); font-size: 12px; }
 
 .update-list { margin: 0; padding: 0; list-style: none; max-width: 770px; }
 .update-list li { display: grid; grid-template-columns: 100px 1fr; gap: 20px; padding: 5px 0; }
-.update-list time { color: var(--muted); font-size: 13px; font-weight: 600; }
+.update-list time, .update-list .milestone-date { color: var(--muted); font-size: 13px; font-weight: 600; }
 
 .background-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; }
 .subheading { margin-bottom: 22px; font-size: 24px; }
@@ -88,6 +88,14 @@ figcaption { margin-top: 8px; color: var(--muted); font-size: 12px; }
 .compact-entry p { margin: 3px 0 0; color: var(--muted); font-size: 13px; line-height: 1.45; }
 .company-logo, .school-logo { display: block; width: 42px; max-height: 42px; object-fit: contain; }
 .company-logo.abb { width: 37px; }.company-logo.dsme { width: 44px; }.school-logo { width: 43px; max-height: 43px; }
+.outreach-grid { display: grid; gap: 40px; }
+.outreach-entry { min-width: 0; display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 32px; align-items: start; }
+.outreach-cover img { display: block; width: 100%; height: auto; border: 1px solid var(--line); }
+.outreach-copy { min-width: 0; }
+.outreach-entry h3 { font-size: 25px; }
+.outreach-entry .outreach-role { margin: 10px 0 0; color: var(--muted); font-size: 13px; }
+.outreach-copy > p { margin: 18px 0 0; }
+.outreach-entry .outreach-links { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: auto; padding-top: 22px; font-size: 14px; }
 .cv-callout { margin: 0 0 90px; padding: 28px 32px; background: var(--soft); border-left: 3px solid var(--accent); }
 .cv-callout p { margin: 0; font: 500 19px/1.45 var(--serif); }
 footer { width: min(1040px, calc(100% - 48px)); margin: 0 auto; padding: 20px 0 38px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
@@ -112,6 +120,8 @@ footer p { margin: 0; }
   .research-card h3 { font-size: 24px; }
   .earlier-research { grid-template-columns: 1fr; gap: 22px; }
   .background-grid { grid-template-columns: 1fr; gap: 48px; }
+  .outreach-grid { grid-template-columns: 1fr; gap: 40px; }
+  .outreach-entry { grid-template-columns: 90px minmax(0, 1fr); gap: 20px; }
   .update-list li { grid-template-columns: 86px 1fr; gap: 13px; }
   .cv-callout { margin-bottom: 65px; padding: 24px; }
 }
@@ -123,4 +133,6 @@ footer p { margin: 0; }
   .hero-identity { grid-template-columns: 1fr 90px; }
   .portrait { width: 90px; height: 90px; }
   .advisor { font-size: 12px; }
+  .outreach-entry { grid-template-columns: 1fr; gap: 20px; }
+  .outreach-cover { width: 100px; }
 }
