@@ -55,6 +55,7 @@
 .cv-page .entry-date { margin: 0; color: var(--cv-muted); font-size: .875rem; }
 .cv-page .entry-role { margin: 3px 0 0; font-size: .9375rem; }
 .cv-page .location { color: var(--cv-muted); }
+.cv-page .entry-heading h3 .location { font-size: .875rem; font-weight: 400; white-space: nowrap; }
 .cv-page .experience-entry > p:not(.entry-role) { margin: 8px 0 0; }
 .cv-page .company-entry, .cv-page .education-entry { display: block; }
 .cv-page .company-logo-wrap { display: flex; align-items: center; justify-content: center; min-height: 72px; }
@@ -99,7 +100,7 @@
   .cv-page .publication-title { overflow-wrap: anywhere; }
   .cv-page .entry-heading { display: block; }
   .cv-page .entry-date { margin-top: 3px; }
-  .cv-page .entry-role .location { display: block; }
+  .cv-page .entry-role .location, .cv-page .entry-heading h3 .location { display: block; }
   .cv-page .skills-list > div { display: block; margin-bottom: 12px; }
   .cv-page .skills-list dt { margin-bottom: 2px; }
   .cv-page .skills-list dd { color: #555; }
