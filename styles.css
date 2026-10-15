@@ -44,7 +44,7 @@ h4 { font-size: 15px; font-weight: 600; }
 .portrait { width: 156px; height: 156px; object-fit: cover; border-radius: 2px; filter: saturate(.88); }
 .hero-copy { width: min(775px, 100%); margin-top: 62px; }
 .hero-copy p { margin: 0 0 19px; font-size: 18px; }
-.hero-copy .research-statement { font: 500 clamp(24px, 3.15vw, 34px)/1.33 var(--serif); letter-spacing: -.018em; }
+.hero-copy .research-statement { font: 500 clamp(23px, 3vw, 32px)/1.33 var(--serif); letter-spacing: -.018em; }
 .contact-links { display: flex; flex-wrap: wrap; gap: 8px 19px; padding-top: 10px; font-size: 15px !important; }
 
 .section { padding: 92px 0; border-top: 1px solid var(--line); }
@@ -105,7 +105,7 @@ footer p { margin: 0; }
   .site-header, main, footer { width: min(100% - 32px, 1040px); }
   .site-header { min-height: 64px; }
   nav { gap: 13px; font-size: 12px; }
-  nav a:nth-child(3), nav a:nth-child(4) { display: none; }
+
   .hero { padding: 68px 0 76px; }
   .hero-identity { grid-template-columns: 1fr 112px; gap: 20px; }
   .portrait { width: 112px; height: 112px; }
@@ -129,10 +129,28 @@ footer p { margin: 0; }
 @media (max-width: 430px) {
   .site-header { align-items: center; }
   nav { gap: 10px; }
-  nav a:nth-child(2) { display: none; }
+
   .hero-identity { grid-template-columns: 1fr 90px; }
   .portrait { width: 90px; height: 90px; }
   .advisor { font-size: 12px; }
   .outreach-entry { grid-template-columns: 1fr; gap: 20px; }
   .outreach-cover { width: 100px; }
+}
+
+.research-card-copy .research-scope { font-size: 14px; color: var(--muted); }
+.research-metric { font-family: var(--serif); font-size: 17px; overflow-wrap: anywhere; }
+.compact-entry:has(.industry-summary) { align-items: start; }
+.compact-entry .industry-summary, .compact-entry .industry-details { font-size: 14px; line-height: 1.65; margin-top: 12px; color: var(--ink); }
+.industry-details { padding-left: 18px; margin-bottom: 0; }
+.industry-details li + li { margin-top: 8px; }
+
+/* Shared header on Home, Personal and CV. */
+.site-header { gap: 24px; font-family: var(--sans); }
+.site-header nav { flex-wrap: wrap; justify-content: flex-end; }
+.site-header nav a, .site-header .wordmark { color: var(--ink); text-decoration: none; }
+.site-header nav a:hover { color: var(--accent); text-decoration: none; }
+.site-header nav a[aria-current="page"] { color: var(--accent); font-weight: 600; }
+@media (max-width: 720px) {
+  .site-header { padding-block: 16px; align-items: flex-start; gap: 20px; }
+  .site-header nav { gap: 10px 14px; }
 }

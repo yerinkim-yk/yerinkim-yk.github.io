@@ -1,0 +1,75 @@
+.personal-about { display: grid; grid-template-columns: 1fr 1.15fr; gap: 64px; align-items: center; padding: 90px 0; }
+.personal-about h1 { font-size: 52px; }
+.personal-about p:not(.eyebrow) { color: var(--muted); margin: 22px 0 0; }
+.personal-about img { width: 100%; height: auto; display: block; }
+.personal-interests, .personal-places { border-top: 1px solid var(--line); padding: 56px 0 70px; }
+.personal-page h2 { font-size: 34px; }
+.interest-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 32px; }
+.interest-grid img { width: min(100%, 300px); height: auto; aspect-ratio: 3 / 4; object-fit: cover; object-position: center 65%; display: block; }
+.interest-grid h3 { margin-top: 24px; font-size: 26px; }
+.interest-grid p, .places-intro { color: var(--muted); }
+.places-list { list-style: none; padding: 0; margin: 32px 0 0; }
+.places-list li { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.places-list h3 { font-family: var(--sans); font-size: 18px; line-height: 1.65; letter-spacing: 0; }
+.places-list h3 span { font-size: 13px; font-weight: 400; color: var(--muted); margin-left: 10px; }
+.places-list p { margin: 0; font-size: 14px; }
+.places-list p span { display: block; color: var(--muted); font-size: 13px; }
+@media (max-width: 720px) {
+  .personal-about { grid-template-columns: 1fr; gap: 32px; padding: 55px 0; }
+  .interest-grid { gap: 24px; }
+  .places-list li { grid-template-columns: 1fr; gap: 4px; }
+}
+@media (max-width: 480px) {
+  .interest-grid { grid-template-columns: 1fr; gap: 40px; }
+  .personal-page h2 { font-size: 29px; }
+}
+
+/* A route through home cities, with temporary stays branching off. */
+.places-list { position: relative; margin-top: 38px; padding-left: 30px; max-width: 760px; }
+.places-list::before { content: ""; position: absolute; left: 6px; top: 14px; bottom: 35px; width: 1px; background: #b5c9c4; }
+.places-list li { position: relative; display: block; padding: 0 0 32px 12px; border: 0; }
+.places-list li::before { content: ""; position: absolute; left: -30px; top: 8px; width: 11px; height: 11px; border: 2px solid var(--accent); border-radius: 50%; background: white; }
+.places-list li:last-child { padding-bottom: 0; }
+.places-list p { margin-top: 5px; }
+.places-list p span { margin-top: 3px; }
+.places-list .temporary-stay { margin-left: 38px; }
+.places-list .temporary-stay::before { border-color: #91aaa4; width: 9px; height: 9px; top: 9px; }
+.places-list .temporary-stay::after { content: ""; position: absolute; left: -62px; top: 13px; width: 32px; border-top: 1px dashed #91aaa4; }
+.places-list .current-home::before { background: var(--accent); box-shadow: 0 0 0 4px #edf3f1; }
+@media (min-width: 721px) {
+  .places-list li { display: grid; grid-template-columns: 280px 1fr; gap: 24px; }
+  .places-list .temporary-stay { grid-template-columns: 242px 1fr; }
+  .places-list p { margin-top: 0; }
+}
+
+.personal-epilogue { padding: 70px 0 100px; text-align: center; color: var(--muted); }
+.personal-epilogue p { margin: 0; line-height: 1.9; font-size: 15px; }
+.personal-epilogue p + p { margin-top: 34px; }
+@media (max-width: 480px) {
+  .personal-epilogue { padding: 45px 0 75px; }
+}
+
+/* Compact photos alongside each hobby description. */
+.interest-grid { gap: 36px; }
+.interest-grid article { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 22px; align-items: center; }
+.interest-grid img { width: 100%; }
+.interest-copy h3 { margin-top: 0; font-size: 24px; }
+.interest-copy p { margin: 14px 0 0; font-size: 15px; }
+.personal-epilogue { border-top: 1px solid var(--line); }
+@media (max-width: 900px) {
+  .interest-grid { grid-template-columns: 1fr; gap: 36px; }
+  .interest-grid article { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+}
+@media (max-width: 480px) {
+  .interest-grid article { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; }
+  .interest-copy h3 { font-size: 21px; }
+  .interest-copy p { font-size: 14px; }
+}
+
+
+.interests-intro { color: var(--muted); margin: 20px 0 0; }
+
+.personal-epilogue .motto-original { font-size: 21px; color: var(--ink); }
+.personal-epilogue .motto-original[lang="la"] { font-family: var(--serif); font-weight: 500; font-style: italic; }
+.personal-epilogue .motto-original[lang="ko"] { font-family: "Noto Serif KR", serif; font-weight: 400; font-style: normal; }
+.personal-epilogue .motto-translation { font-family: var(--sans); font-size: 15px; font-weight: 400; font-style: normal; color: var(--muted); }
