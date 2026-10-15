@@ -81,22 +81,37 @@
 .personal-epilogue .motto-original[lang="ko"] { font-family: "Noto Serif KR", serif; font-weight: 400; font-style: normal; }
 .personal-epilogue .motto-translation { font-family: var(--sans); font-size: 15px; font-weight: 400; font-style: normal; color: var(--muted); }
 
-/* Well-Loved Pages: six covers spread across the row on one shelf; three per row on small screens. */
-.personal-books { border-top: 1px solid var(--line); padding: 56px 0 70px; container-type: inline-size; }
+/* Well-Loved Pages: six green cards, each with a white shape holding the title and author. */
+.personal-books { border-top: 1px solid var(--line); padding: 56px 0 70px; }
 .books-intro { color: var(--muted); }
-.book-list { --cover: min(123px, (100cqi - 5 * 20px) / 6); position: relative; list-style: none; padding: 0; margin: 36px 0 0; display: flex; justify-content: space-between; }
-.book-list li { width: var(--cover); }
-.book-list::before { content: ""; position: absolute; left: 0; right: 0; top: calc(var(--cover) * 1.5); border-bottom: 3px solid #c9d6d2; pointer-events: none; }
-.book-list figure { position: relative; margin: 0; }
-.book-list img { display: block; width: 100%; height: auto; aspect-ratio: 2 / 3; object-fit: cover; border: 1px solid var(--line); box-shadow: 0 9px 14px -10px rgba(25, 32, 34, .45); }
-.book-list figcaption { margin-top: 15px; font-size: 14px; line-height: 1.4; }
-@media (max-width: 720px) {
-  .book-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px 18px; max-width: 480px; overflow: hidden; }
-  .book-list li { width: auto; }
-  .book-list::before { content: none; }
-  /* One shelf per row: each line spans half the gap on both sides so neighbours join up. */
-  .book-list figure::before { content: ""; position: absolute; left: -9px; right: -9px; top: 0; padding-top: 150%; border-bottom: 3px solid #c9d6d2; pointer-events: none; }
-  .book-list figcaption { font-size: 13px; }
+.book-list { list-style: none; padding: 0; margin: 32px 0 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; }
+.book-list li { container-type: inline-size; display: flex; align-items: center; justify-content: center; aspect-ratio: 1; padding: 6px; background: var(--accent); }
+.book-shape { position: relative; width: 100%; aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+.book-shape::before { content: ""; position: absolute; inset: 0; background: center / contain no-repeat; }
+.shape-arch .book-shape::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23efe8dc' d='M10 94V44a40 40 0 0 1 80 0v50z'/%3E%3C/svg%3E"); }
+.shape-triangle .book-shape::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23efe8dc' d='M50 3 99 94H1z'/%3E%3C/svg%3E"); }
+.shape-square .book-shape::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23efe8dc' x='5' y='5' width='90' height='90'/%3E%3C/svg%3E"); }
+.shape-heart .book-shape::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23efe8dc' d='M50 94C21 72 2 54 2 31 2 15 14 4 29 4c9 0 17 5 21 13 4-8 12-13 21-13 15 0 27 11 27 27 0 23-19 41-48 63z'/%3E%3C/svg%3E"); }
+.shape-diamond .book-shape::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23efe8dc' d='M50 0 100 50 50 100 0 50z'/%3E%3C/svg%3E"); }
+.shape-circle .book-shape::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle fill='%23efe8dc' cx='50' cy='50' r='49'/%3E%3C/svg%3E"); }
+.book-shape h3, .book-shape p { position: relative; max-width: 74%; }
+.book-shape h3 { font-size: clamp(13px, 11.5cqi, 19px); line-height: 1.2; letter-spacing: -.01em; text-wrap: balance; }
+.book-shape p { margin: .45em 0 0; color: #56605f; font-size: clamp(10px, 7.4cqi, 12.5px); line-height: 1.3; }
+/* Nudge the text into the roomiest part of the narrower shapes. */
+.shape-arch .book-shape { padding-top: 12%; }
+.shape-triangle .book-shape { padding-top: 40%; }
+.shape-triangle .book-shape h3, .shape-triangle .book-shape p { max-width: 56%; }
+.shape-heart .book-shape { padding-bottom: 10%; }
+.shape-heart .book-shape h3, .shape-heart .book-shape p { max-width: 62%; }
+.shape-diamond .book-shape h3, .shape-diamond .book-shape p { max-width: 56%; }
+@media (max-width: 900px) {
+  .book-list { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 600px; }
 }
+@media (max-width: 430px) {
+  .book-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+}
+
+
+
 
 
