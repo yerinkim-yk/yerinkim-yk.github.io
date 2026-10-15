@@ -21,12 +21,11 @@
 .cv-page .skip-link:focus { top: 10px; }
 
 .cv-page .introduction { margin: 80px 0 0; padding-bottom: 28px; }
-.cv-page .profile-header { display: grid; grid-template-columns: minmax(0, 1fr) 180px; align-items: center; gap: 64px; }
+.cv-page .profile-header { display: block; }
 .cv-page h1, .cv-page h2, .cv-page h3, .cv-page h4 { font-family: Arial, Helvetica, sans-serif; letter-spacing: normal; }
 .cv-page h1 { margin: 0 0 18px; font-size: 2.5rem; font-weight: 400; line-height: 1.2; }
 .cv-page .page-label { color: var(--cv-muted); font-size: .875rem; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 14px; }
 .cv-page .position { color: #4b4b4b; line-height: 1.8; }
-.cv-page .portrait { display: block; width: 180px; max-width: 100%; height: auto; margin: 0; border-radius: 0; filter: none; }
 .cv-page .profile-links { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 18px; font-size: .9375rem; }
 .cv-page .profile-links a { white-space: nowrap; }
 
@@ -84,8 +83,6 @@
 @media (max-width: 700px) {
   .cv-page main, .cv-page .site-footer { width: calc(100% - 40px); }
   .cv-page .introduction { margin-top: 56px; padding-bottom: 20px; }
-  .cv-page .profile-header { grid-template-columns: minmax(0, 1fr) 135px; gap: 32px; }
-  .cv-page .portrait { width: 135px; }
   .cv-page h1 { font-size: 2.125rem; }
   .cv-page .position { font-size: .9375rem; }
   .cv-page .section { margin-top: 38px; }
@@ -97,8 +94,6 @@
   .cv-page .education-logo-wrap { min-height: 64px; }
   .cv-page .education-logo { width: 64px; height: 64px; }
   .cv-page .education-logo-snu { width: 56px; height: 60px; }
-  .cv-page .profile-header { grid-template-columns: minmax(0, 1fr) 104px; gap: 20px; }
-  .cv-page .portrait { width: 104px; }
   .cv-page .position { font-size: .875rem; }
   .cv-page .publication-list > li { grid-template-columns: 38px minmax(0, 1fr); gap: 12px; }
   .cv-page .publication-title { overflow-wrap: anywhere; }
@@ -115,8 +110,6 @@
   .cv-page main, .cv-page .site-footer { width: 100%; }
   .cv-page .site-header, .cv-page .skip-link, .cv-page .site-footer a { display: none; }
   .cv-page .introduction { margin-top: 0; padding-bottom: 0; }
-  .cv-page .profile-header { grid-template-columns: minmax(0, 1fr) 120px; gap: 30px; }
-  .cv-page .portrait { width: 120px; }
   .cv-page h1 { font-size: 24pt; }
   .cv-page a { color: var(--cv-text); }
   .cv-page .section { margin-top: 22px; }
