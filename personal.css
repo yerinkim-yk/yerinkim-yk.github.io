@@ -33,7 +33,7 @@
 
 /* A route through home cities, with temporary stays branching off. */
 .places-list { position: relative; margin-top: 38px; padding-left: 30px; max-width: 760px; }
-.places-list::before { content: ""; position: absolute; left: 6px; top: -12px; bottom: 35px; width: 1px; background: #b5c9c4; }
+.places-list::before { content: ""; position: absolute; left: 6px; top: 14px; bottom: 35px; width: 1px; background: #b5c9c4; }
 .places-list li { position: relative; display: block; padding: 0 0 32px 12px; border: 0; }
 .places-list li::before { content: ""; position: absolute; left: -30px; top: 8px; width: 11px; height: 11px; border: 2px solid var(--accent); border-radius: 50%; background: white; }
 .places-list li:last-child { padding-bottom: 0; }
