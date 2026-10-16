@@ -123,3 +123,7 @@
 
 /* A quiet side note beside a date, e.g. a few childhood years spent elsewhere. */
 .places-list .places-aside { display: block; color: #939b9b; font-size: 12px; font-weight: 400; line-height: 1.5; }
+
+/* The key phrase in the opening: a touch larger, in green, with a thin pale highlight and a small sparkle. */
+.about-copy .about-accent { font-size: 1.26em; line-height: 1.4; color: var(--accent); background: linear-gradient(transparent 66%, #e4eeea 66%, #e4eeea 90%, transparent 90%); -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.about-copy .about-spark { margin-left: .2em; color: #a9c7bd; font-size: .72em; vertical-align: .55em; line-height: 0; }
