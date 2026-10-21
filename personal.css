@@ -127,3 +127,6 @@
 /* The key phrase in the opening: a touch larger, in green, with a thin pale highlight and a small sparkle. */
 .about-copy .about-accent { font-size: 1.26em; line-height: 1.4; color: var(--accent); background: linear-gradient(transparent 66%, #e4eeea 66%, #e4eeea 90%, transparent 90%); -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 .about-copy .about-spark { margin-left: .2em; color: #a9c7bd; font-size: .72em; vertical-align: .55em; line-height: 0; }
+
+/* Profile links under the About copy, styled like the contact links on Home. */
+.about-copy .about-links { display: flex; flex-wrap: wrap; gap: 8px 19px; margin-top: 20px; font-size: 15px; }
