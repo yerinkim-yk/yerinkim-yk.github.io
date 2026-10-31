@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Research projects by Yerin Kim: deceptive policy optimization with performance guarantees, and stealthy deception in linear-quadratic control.">
+<title>Yerin Kim | Projects</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&amp;family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="projects.css">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Yerin Kim">
+<meta property="og:title" content="Yerin Kim | Projects">
+<meta property="og:description" content="Research projects by Yerin Kim: deceptive policy optimization with performance guarantees, and stealthy deception in linear-quadratic control.">
+<meta property="og:url" content="https://yerinkim-yk.github.io/projects">
+<meta property="og:image" content="https://yerinkim-yk.github.io/assets/deception-estimation-framework.png">
+<meta property="og:image:alt" content="Optimal, deceptive, and observer-estimated policies and their associated value functions">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Yerin Kim | Projects">
+<meta name="twitter:description" content="Research projects by Yerin Kim: deceptive policy optimization with performance guarantees, and stealthy deception in linear-quadratic control.">
+<meta name="twitter:image" content="https://yerinkim-yk.github.io/assets/deception-estimation-framework.png">
+</head>
+<body class="project-page">
+<a class="skip" href="#main">Skip to projects</a>
+<header class="site-header"><a class="wordmark" href="./" aria-label="Yerin Kim home">YK</a><nav aria-label="Primary navigation"><a href="./">Home</a><a href="projects" aria-current="page">Projects</a><a href="personal">Personal</a><a class="nav-cv" href="cv">CV</a></nav></header>
+<main id="main">
+<section class="project-intro" aria-labelledby="page-title"><p class="eyebrow">Selected research</p><h1 id="page-title">Autonomous decision-making<br>in interactive environments.</h1><p class="intro-copy">I study how autonomous systems can account for the inference and responses of other agents in their decision-making. My current work focuses on interactions between a system and an observer, especially how control policies shape the observer’s inference, and how anticipating that inference informs policy design.</p></section>
+<nav class="project-index" aria-label="Project index">
+<a href="#sequential"><span class="index-number">01</span><span>Deceptive Policy Optimization with Performance Guarantees<small>Multi-agent systems · Markov Decision Process · Inverse reinforcement learning</small></span><span aria-hidden="true">↘</span></a>
+<a href="#lq"><span class="index-number">02</span><span>Stealthy Deception in Linear-Quadratic Control<small>Optimal control · Sequential hypothesis testing</small></span><span aria-hidden="true">↘</span></a>
+</nav>
+<article class="project-case" id="sequential" aria-labelledby="sequential-title">
+<div class="case-topline"><p class="eyebrow">01 / Deceptive Policy Optimization with Performance Guarantees</p><span class="case-status">Preprint · Under review</span></div>
+<h2 id="sequential-title">Deceptive Sequential Decision-Making via Regularized Policy Optimization</h2>
+<p class="case-deck">Synthesizing policies that mislead reward inference, with explicit bounds on the accumulated reward sacrificed for deception.</p>
+<div class="case-links"><a href="https://ieeexplore.ieee.org/abstract/document/10773660" target="_blank" rel="noreferrer">Read conference paper ↗</a><a href="https://arxiv.org/abs/2501.18803" target="_blank" rel="noreferrer">Read journal extension (preprint) ↗</a><a href="https://github.com/yerinkim-yk/DeceptionMTD" target="_blank" rel="noreferrer">Explore code ↗</a><a href="assets/slides-deceptive-policy-optimization.pdf" target="_blank" rel="noreferrer">View slides ↗</a></div>
+<div class="case-overview">
+<div class="case-question"><h3 class="question-label">Research question</h3><p class="research-question">How can an autonomous system anticipate and mislead an observer’s inference of its objectives while accounting for the resulting performance loss?</p><h3>Approach</h3><p>Three regularizers reshape a policy’s <strong class="key-phrase">discounted state–action visitation frequencies</strong> (occupancy measures) in an MDP. A single parameter β sets the deception strength and can be chosen from problem-dependent bounds on the resulting performance loss.</p></div>
+<figure><img src="assets/deception-estimation-framework.png" alt="Optimal, deceptive, and observer-estimated policies and their associated value functions"><figcaption>Instead of its optimal policy π*, the agent follows a deceptive policy π<sub>d</sub> that hides its true objective. The observer’s IRL estimate π̂ then leads to an incorrect inference about that objective.</figcaption></figure>
+</div>
+<section class="key-findings" aria-labelledby="sequential-findings"><h3 id="sequential-findings">Key findings</h3><ul>
+<li><strong>Controllable deception.</strong> Occupancy-based regularization enables three distinct strategies: diverting inference, suggesting a chosen false objective, and making real and decoy objectives appear equally plausible.</li>
+<li><strong>Bounded performance loss.</strong> Problem-dependent bounds relate regularization strength to accumulated reward loss, guiding policy design under a specified performance-loss budget.</li>
+</ul></section>
+<div class="method-grid">
+<section><span class="step">01 / Diversionary</span><h3>Induce a different objective</h3><p>Encourage deviation from nominal occupancy to induce a false inference, without specifying a target objective.</p></section>
+<section><span class="step">02 / Targeted</span><h3>Suggest a chosen false goal</h3><p>Pull occupancy toward a target occupancy measure that emphasizes decoy goals, suggesting a chosen false objective.</p></section>
+<section><span class="step">03 / Equivocal</span><h3>Make two goals plausible</h3><p>Balance visits to real and decoy goals so both appear plausible.</p></section>
+</div>
+<section class="simulation-section" aria-labelledby="simulation-title"><h3 id="simulation-title">Simulation studies</h3>
+<details class="simulation-toggle"><summary><span><strong>Moving target defense</strong><small>Hiding real agents among decoys · setup &amp; results</small></span><span class="toggle-icon" aria-hidden="true"></span></summary><div class="simulation-content evidence-block">
+<p>The observer uses inferred rewards to identify real agents among decoys. Tests cover apprenticeship learning, maximum-entropy IRL, and deep maximum-entropy IRL; agent-likelihood estimates are averaged over 100 runs.</p>
+<div class="experiment-setup"><strong>MTD setup · Section IV</strong><ul>
+<li><strong>System:</strong> 5 agents; 4 states (normal, targeted, exploited, breached), 3 actions (wait, defend, reset); 248,832 joint state–action pairs. All start normal; transitions follow Fig. 1.</li>
+<li><strong>Rewards:</strong> R = 10; C<sub>T</sub> = 0.1, C<sub>E</sub> = 3, C<sub>B</sub> = 4; C<sub>D</sub> = 5, C<sub>R</sub> = 20. Decoy rewards = 1% of real-agent rewards; v<sub>reach</sub> = 7.</li>
+<li><strong>Metric:</strong> accumulated discounted reward / non-deceptive optimal reward, for the same configuration.</li>
+</ul></div>
+<div class="results-table-wrap"><table class="results-table"><caption>MTD reward retention at selected β values · Section IV, Fig. 5</caption><thead><tr><th scope="col">Strategy</th><th scope="col">Agent configuration</th><th scope="col">Parameter</th><th scope="col">Reward retained</th></tr></thead><tbody>
+<tr><th scope="row">Diversionary</th><td>1 real + 4 decoys</td><td>β = 0.4</td><td>98.04%</td></tr>
+<tr><th scope="row">Diversionary</th><td>2 real + 3 decoys</td><td>β = 0.4</td><td>99.07%</td></tr>
+<tr><th scope="row">Targeted</th><td>1 real + 1 target decoy + 3 other decoys</td><td>β = 0.02</td><td>99.95%</td></tr>
+<tr><th scope="row">Targeted</th><td>1 real + 2 target decoys + 2 other decoys</td><td>β = 0.02</td><td>99.90%</td></tr>
+<tr><th scope="row">Equivocal</th><td>1 real + 1 target decoy + 3 other decoys</td><td>β = 50</td><td>99.99%</td></tr>
+<tr><th scope="row">Equivocal</th><td>1 real + 2 target decoys + 2 other decoys</td><td>β = 50</td><td>99.98%</td></tr>
+</tbody></table><p class="source-note">These are policy-value comparisons, not IRL success rates. The 100-run averages above apply to the separate observer-inference evaluations.</p></div>
+</div></details>
+<details class="simulation-toggle"><summary><span><strong>Stochastic gridworld</strong><small>Deceptive navigation · setup &amp; results</small></span><span class="toggle-icon" aria-hidden="true"></span></summary><div class="simulation-content evidence-block">
+<div class="experiment-setup"><strong>Gridworld setup · Appendix V</strong><ul>
+<li><strong>Task:</strong> one agent, 5 × 5 grid; upper-left → lower-right, then reset. Preferred route: right then down; decoy: down then right.</li>
+<li><strong>Dynamics:</strong> intended direction with probability 0.9; otherwise uniformly random. γ = 0.9; v<sub>reach</sub> = 3.</li>
+<li><strong>Rewards:</strong> 0.1 on the preferred path, 10.1 at the terminal state, −0.1 elsewhere.</li>
+</ul></div>
+<figure class="simulation-figure"><a href="assets/gridworld_occupancy_1x4.png" target="_blank" rel="noreferrer" aria-label="Open gridworld state occupancy figure at full size"><img src="assets/gridworld_occupancy_1x4.png" alt="State occupancy in the specified 5 by 5 gridworld: nominal policy, diversionary deception at beta 0.07, targeted deception at beta 0.15, and equivocal deception at beta 0.05. S marks the start and T the terminal state." loading="lazy" width="3925" height="995"></a><figcaption>State occupancies under the gridworld setup above: no deception, diversionary (β = 0.07), targeted (β = 0.15), and equivocal (β = 0.05). S: start; T: terminal state. Click to enlarge.</figcaption></figure>
+<div class="results-table-wrap"><table class="results-table"><caption>Gridworld reward retention relative to its own non-deceptive optimum · Fig. 8</caption><thead><tr><th scope="col">Strategy</th><th scope="col">Parameter</th><th scope="col">Reward retained</th></tr></thead><tbody>
+<tr><th scope="row">Diversionary</th><td>β = 0.07</td><td>84.61%</td></tr>
+<tr><th scope="row">Targeted</th><td>β = 0.15</td><td>84.51%</td></tr>
+<tr><th scope="row">Equivocal</th><td>β = 0.05</td><td>90.85%</td></tr>
+</tbody></table></div>
+<p>This example evaluates occupancy patterns, not IRL success. Its larger reward loss shows that deception costs depend on the environment.</p>
+</div></details></section>
+<details class="technical-note"><summary>Technical details</summary>
+<dl class="technical-list">
+<div><dt>Performance bounds</dt><dd>Theorems 1–3 bound reward loss linearly in β for a fixed problem. Use these problem-dependent bounds to choose β from an allowable loss budget.</dd></div>
+<div><dt>Computation</dt><dd>Targeted and equivocal synthesis are convex quadratic programs. Diversionary synthesis is generally NP-hard. Joint state–action spaces can grow exponentially with agent count.</dd></div>
+<div><dt>Inference result</dt><dd>Proposition 1 links nearby occupancy measures to mutual regret for fixed linear reward models. Deep IRL results are empirical.</dd></div>
+<div><dt>Assumptions &amp; limits</dt><dd>Finite discounted MDP; known dynamics and rewards; visitation-based inference. Deception is not guaranteed against every observer. Adaptive adversaries remain future work.</dd></div>
+</dl>
+</details>
+</article>
+<article class="project-case" id="lq" aria-labelledby="lq-title">
+<div class="case-topline"><p class="eyebrow">02 / Stealthy Deception in Linear-Quadratic Control</p><span class="case-status">Preprint</span></div>
+<h2 id="lq-title">Deception in Linear-Quadratic Control</h2>
+<p class="case-deck">Introducing deceptive perturbations into system trajectories while limiting their detectability.</p>
+<div class="case-links"><a href="https://arxiv.org/abs/2604.00227" target="_blank" rel="noreferrer">Read paper ↗</a><a href="https://github.com/yerinkim-yk/Deception-in-LQ-control" target="_blank" rel="noreferrer">Explore code ↗</a><a href="assets/slides-deception-lq-control.pdf" target="_blank" rel="noreferrer">View slides ↗</a></div>
+
+<div class="case-overview"><div class="case-question"><h3 class="question-label">Research question</h3><p class="research-question">How can a controller account for an observer’s detection test when introducing deceptive perturbations, keeping detection probability below a prescribed tolerance?</p><h3>Approach</h3><p>Add a deception objective based on the expected log-likelihood ratio while maintaining linear-quadratic structure. Dynamic programming yields a semi-explicit feedback controller, and detection probability analysis guides the selection of intensity λ.</p></div><figure><img src="assets/lq-detection.png" alt="Sample log-likelihood-ratio trajectories and their mean below the SPRT detection threshold at deception intensity 0.04" loading="lazy"><figcaption>Under the observer’s sequential hypothesis test, almost all sample paths stay below the detection threshold, so the deception goes undetected. See the <a href="#lq-setup">simulation setup</a> for details.</figcaption></figure></div>
+<section class="key-findings" aria-labelledby="lq-findings"><h3 id="lq-findings">Key findings</h3><ul>
+<li><strong>Tractable controller synthesis.</strong> The deception-augmented objective preserves the LQ structure, yielding an optimal affine feedback controller with a sufficient condition for well-posedness.</li>
+<li><strong>Detection-aware intensity selection.</strong> Analytical probability bounds and sampling-based estimates guide the choice of deception intensity under a per-time detection constraint.</li>
+</ul></section>
+<div class="method-grid">
+<section><span class="step">01 / Synthesize</span><h3>Retain the LQ structure</h3><p>Preserve a quadratic cost, solve backward controller recursions, and establish a sufficient well-posedness condition.</p></section>
+<section><span class="step">02 / Calibrate</span><h3>Choose the deception intensity</h3><p>Select λ using Monte Carlo score intervals or conservative analytical detection bounds.</p></section>
+<section><span class="step">03 / Evaluate</span><h3>Measure the three-way tradeoff</h3><p>Compare perturbation strength, control cost, and maximum per-time detection probability across detection tolerances ε, using the largest admissible λ for each.</p></section>
+</div>
+<section class="simulation-section" aria-labelledby="lq-simulation-title"><h3 id="lq-simulation-title">Simulation studies</h3>
+<details class="simulation-toggle" id="lq-evaluation"><summary id="lq-results"><span><strong>LQ control evaluation</strong><small>Stealthy trajectory perturbations · setup &amp; results</small></span><span class="toggle-icon" aria-hidden="true"></span></summary><div class="simulation-content evidence-block">
+<div class="experiment-setup" id="lq-setup"><strong>LQ simulation setup · applies to this project’s figure and numerical results</strong><ul>
+<li><strong>System:</strong> n = 1, states (v, p), T = 20, initial state (1, 4). Independent Gaussian noise: Σ<sub>z</sub><sup>2</sup> = Σ<sub>y</sub><sup>2</sup> = 0.05.</li>
+<li><strong>Cost:</strong> R<sub>α</sub> = R<sub>v</sub> = T<sub>v</sub> = 1; R<sub>β</sub> = 10; reference v̄<sub>t</sub> = 1 − t/20.</li>
+<li><strong>Deception / observer:</strong> F<sub>b</sub> = 0.5, F<sub>c</sub> = −0.1, f<sub>d</sub> = 0; SPRT a = b = 0.01 (U = 99).</li>
+</ul></div>
+<div class="result-strip lq-result"><div><span class="result-number">ε = 0.02</span><span class="result-label">per-time detection tolerance · λ = 0.04</span></div><p>In the <a href="#lq-setup">scalar, T = 20 simulation setup</a>: 20,000 Monte Carlo samples at λ = 0.04 yield 95% score-interval upper endpoints below 2% at every time step.</p></div>
+<p>In the setup above, state and control trajectories at λ = 0.04 deviate from the λ = 0 baseline, while almost all of 50 sampled likelihood-ratio paths stay below the detection threshold.</p>
+<p>In the figure at the top of this project, gray lines are these 50 sampled log-likelihood ratios at λ = 0.04, magenta is their expectation, and the dashed line is the threshold log U (Fig. 3b).</p>
+<p><strong>Scope.</strong> Demonstrates low-detectability perturbations under the modeled test. Downstream inference error remains future work.</p>
+</div></details>
+</section>
+<details class="technical-note"><summary>Technical details</summary>
+<dl class="technical-list">
+<div><dt>Control objective</dt><dd><p class="criterion">J<sub>blue</sub>(u) = J<sub>primary</sub>(u) − λ E[log L<sub>T</sub>].</p>The likelihood ratio compares deceptive and nominal hypotheses. Increasing λ encourages perturbations; stealthiness is checked separately.</dd></div>
+<div><dt>Detection criterion</dt><dd><p class="criterion">P(log L<sub>t</sub><sup>*</sup> ≥ log U) ≤ ε, for every t = 0, …, T.</p>A <strong>per-time constraint</strong>, not a horizon-wide crossing guarantee. Below the upper threshold, the observer may still be undecided.</dd></div>
+<div><dt>Controller existence</dt><dd>Theorem 1 provides a sufficient condition for unique controller recursions. In the scalar case, 0 ≤ λ ≤ R<sub>β</sub>Σ<sub>y</sub><sup>2</sup> spans nominal control to the prescribed deceptive input.</dd></div>
+<div><dt>Bounds vs. estimates</dt><dd>Theorem 2 gives a conservative analytical detection bound. Monte Carlo score intervals quantify sampling uncertainty; they are neither deterministic nor simultaneous guarantees across time.</dd></div>
+<div><dt>Numerical comparison</dt><dd>For the <a href="#lq-setup">specified scalar setup</a> at λ = 0.04: the analytical bound limits detection probability to less than 90%, while 20,000 Monte Carlo samples yield per-time 95% score-interval upper endpoints below 2% (Fig. 2).</dd></div>
+<div><dt>Assumptions &amp; limits</dt><dd>Full-state observation, Gaussian noise, and a known deception pattern. The analytical bound uses a zero affine offset. Reactive adversaries and downstream inference remain future work.</dd></div>
+</dl>
+</details>
+</article>
+<div class="project-end"><p>For publications, experience, and education, see my <a href="cv">CV</a>.</p><a href="#main">Back to top ↑</a></div>
+</main><footer><p>© 2026 Yerin Kim</p></footer>
+<script data-goatcounter="https://yerinkim.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script>
+// Reveal a linked experiment before scrolling to its setup.
+function revealLinkedSection(hash) {
+  if (!hash || hash.length < 2) return;
+  const target = document.getElementById(hash.slice(1));
+  if (!target) return;
+  let section = target.closest('details');
+  while (section) {
+    section.open = true;
+    section = section.parentElement.closest('details');
+  }
+  requestAnimationFrame(() => target.scrollIntoView({block: 'start'}));
+}
+document.addEventListener('click', event => {
+  const link = event.target.closest('a[href^="#"]');
+  if (link) revealLinkedSection(link.hash);
+});
+window.addEventListener('hashchange', () => revealLinkedSection(location.hash));
+revealLinkedSection(location.hash);
+</script>
+</body></html>
