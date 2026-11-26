@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&amp;family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=2"><link rel="stylesheet" href="projects.css?v=2">
+<link rel="stylesheet" href="styles.css?v=3"><link rel="stylesheet" href="projects.css?v=8">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Yerin Kim">
 <meta property="og:title" content="Yerin Kim | Projects">
@@ -25,12 +25,16 @@
 <header class="site-header"><a class="wordmark" href="./" aria-label="Yerin Kim home">YK</a><nav aria-label="Primary navigation"><a href="./">Home</a><a href="projects" aria-current="page">Projects</a><a href="personal">Personal</a><a class="nav-cv" href="cv">CV</a></nav></header>
 <main id="main">
 <section class="project-intro" aria-labelledby="page-title"><h1 id="page-title">Autonomous decision-making<br>in interactive environments.</h1><p class="intro-copy">I study how autonomous systems can account for the inference and responses of other agents in their decision-making. My current work focuses on interactions between a system and an observer, especially how control policies shape the observer’s inference, and how anticipating that inference informs policy design.</p></section>
-<nav class="project-index" aria-label="Project index">
-<a href="#sequential"><span>Deceptive Policy Optimization with Performance Guarantees<small>Multi-agent systems · Markov Decision Process · Inverse reinforcement learning</small></span></a>
-<a href="#lq"><span>Stealthy Deception in Linear-Quadratic Control<small>Optimal control · Sequential hypothesis testing</small></span></a>
-</nav>
+<nav class="project-index" aria-label="Project index"><ol>
+<li><a href="#sequential">Deceptive Sequential Decision-Making via Regularized Policy Optimization</a></li>
+<li><a href="#lq">Deception in Linear-Quadratic Control</a></li>
+<li><a href="#floating-crane">MPC-Based Block-Lifting Control of Floating Cranes</a></li>
+<li><a href="#distributed-svm">Design of Distributed SVM Algorithm using Blended Dynamics Approach</a></li>
+<li><a href="#graph-slam">Simultaneous Localization and Mapping (SLAM) of Robots</a></li>
+</ol></nav>
 <article class="project-case" id="sequential" aria-labelledby="sequential-title">
 <h2 id="sequential-title">Deceptive Sequential Decision-Making via Regularized Policy Optimization</h2>
+<ul class="card-tags" aria-label="Keywords"><li>Multi-agent Markov Decision Processes</li><li>Inverse Reinforcement Learning</li><li>Moving Target Defense</li></ul>
 <div class="case-links"><a href="https://ieeexplore.ieee.org/abstract/document/10773660" target="_blank" rel="noreferrer">Read conference paper</a><a href="https://doi.org/10.1080/01605682.2026.2757159" target="_blank" rel="noreferrer">Read journal paper</a><a href="https://github.com/yerinkim-yk/DeceptionMTD" target="_blank" rel="noreferrer">Explore code</a><a href="assets/slides-deceptive-policy-optimization.pdf" target="_blank" rel="noreferrer">View slides</a></div>
 <div class="case-overview">
 <div class="case-question"><p class="research-question">How can an autonomous system anticipate and mislead an observer’s inference of its objectives while accounting for the resulting performance loss?</p><p>Three regularizers reshape a policy’s <strong class="key-phrase">discounted state–action visitation frequencies</strong> (occupancy measures) in an MDP. A single parameter β sets the deception strength and can be chosen from problem-dependent bounds on the resulting performance loss.</p></div>
@@ -87,6 +91,7 @@
 </article>
 <article class="project-case" id="lq" aria-labelledby="lq-title">
 <h2 id="lq-title">Deception in Linear-Quadratic Control</h2>
+<ul class="card-tags" aria-label="Keywords"><li>Linear-Quadratic Control</li><li>Sequential Hypothesis Testing</li><li>Stealthy Deception</li></ul>
 <div class="case-links"><a href="https://arxiv.org/abs/2604.00227" target="_blank" rel="noreferrer">Read paper (preprint)</a><a href="https://github.com/yerinkim-yk/Deception-in-LQ-control" target="_blank" rel="noreferrer">Explore code</a><a href="assets/slides-deception-lq-control.pdf" target="_blank" rel="noreferrer">View slides</a></div>
 
 <div class="case-overview"><div class="case-question"><p class="research-question">How can a controller account for an observer’s detection test when introducing deceptive perturbations, keeping detection probability below a prescribed tolerance?</p><p>Add a deception objective based on the expected log-likelihood ratio while maintaining linear-quadratic structure. Dynamic programming yields a semi-explicit feedback controller, and detection probability analysis guides the selection of intensity λ.</p></div><figure><img src="assets/lq-detection.png" alt="Sample log-likelihood-ratio trajectories and their mean below the SPRT detection threshold at deception intensity 0.04" loading="lazy"><figcaption>Under the observer’s sequential hypothesis test, almost all sample paths stay below the detection threshold, so the deception goes undetected. See the <a href="#lq-setup">simulation setup</a> for details.</figcaption></figure></div>
@@ -123,6 +128,39 @@
 </dl>
 </details>
 </article>
+<section class="additional-projects" id="additional" aria-labelledby="additional-title">
+<h2 id="additional-title">Additional projects</h2>
+<details class="simulation-toggle" id="floating-crane"><summary><span><strong>MPC-Based Block-Lifting Control of Floating Cranes</strong><span class="mini-tags"><span>Model Predictive Control</span><span>Multibody Dynamics</span><span>Genetic Algorithm</span><span>Underactuated Systems</span></span><small>System Design Laboratory, SNU · Mar 2021 – Jun 2022 · B.S. thesis</small></span><span class="toggle-icon" aria-hidden="true"></span></summary><div class="simulation-content mini-case">
+<figure class="mini-figure"><img src="assets/additional-floating-crane.png" alt="Two-dimensional floating crane model: a barge with heave and pitch, a boom at angle theta boom, and a block hanging from a wire rope of length l" loading="lazy" width="1400" height="937"><figcaption>2D floating crane model. The controller adjusts the boom angle and wire-rope length to position the block while the barge heaves and pitches.</figcaption></figure>
+<p class="mini-takeaway">Model predictive control positions a wire-suspended block within a small error, and added constraints can directly limit behavior such as overshoot.</p>
+<div class="mini-grid">
+<div><h4>Problem</h4><p>A floating crane is an underactuated multibody system in which the block hangs from the boom on a wire rope and wind and waves act as disturbances.</p></div>
+<div><h4>Approach</h4><p>The crane is modeled with discrete Euler–Lagrange equations inside a feedback MPC loop, and a genetic algorithm solves the strongly nonlinear optimization.</p></div>
+<div><h4>Result</h4><p>Set-point regulation, step tracking, and trajectory tracking were achieved within a small error in simulation. An overshoot constraint kept step-tracking overshoot within the set limit.</p></div>
+</div>
+<div class="case-links"><a href="https://doi.org/10.1093/jcde/qwag068" target="_blank" rel="noreferrer">Related journal paper</a></div>
+</div></details>
+<details class="simulation-toggle" id="distributed-svm"><summary><span><strong>Design of Distributed SVM Algorithm using Blended Dynamics Approach</strong><span class="mini-tags"><span>Distributed Optimization</span><span>Multi-Agent Systems</span><span>Blended Dynamics</span><span>Support Vector Machines</span></span><small>Control and Dynamic Systems Laboratory, SNU · Apr 2021 – Dec 2021</small></span><span class="toggle-icon" aria-hidden="true"></span></summary><div class="simulation-content mini-case">
+<figure class="mini-figure"><img src="assets/additional-distributed-svm.png" alt="Two scatter plots of 20 two-class data points with the agents' local hyperplanes overlapping the global optimal hyperplane, for coupling gains 300 and 1000" loading="lazy" width="1400" height="737"><figcaption>20 agents, one data point each. Colored lines are the agents’ local hyperplanes, and the bold dashed line is the global optimal hyperplane. A larger coupling gain k (300 → 1000) tightens the consensus.</figcaption></figure>
+<p class="mini-takeaway">Agents reach consensus near the globally optimal SVM classifier without directly exchanging their training data.</p>
+<div class="mini-grid">
+<div><h4>Problem</h4><p>Labeled data are distributed across a network of agents, and collecting them in one place raises scalability and privacy concerns.</p></div>
+<div><h4>Approach</h4><p>Each agent runs local dynamics coupled to its neighbors, and with strong coupling all agents approximately follow the blended dynamics, designed to converge to the optimal SVM solution.</p></div>
+<div><h4>Result</h4><p>Local hyperplanes reach consensus near the global optimum. Because the equilibrium does not depend on initial conditions, online learning is possible even as new agents join.</p></div>
+</div>
+<div class="case-links"><a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11027646" target="_blank" rel="noreferrer">Paper</a><a href="https://github.com/yerinkim-yk/Distributed-Support-Vector-Machine" target="_blank" rel="noreferrer">Code</a><a href="assets/slides-distributed-svm.pdf" target="_blank" rel="noreferrer">Slides</a></div>
+</div></details>
+<details class="simulation-toggle" id="graph-slam"><summary><span><strong>Simultaneous Localization and Mapping (SLAM) of Robots</strong><span class="mini-tags"><span>Graph-Based SLAM</span><span>2D LiDAR</span><span>Loop Closure</span><span>Nonlinear Least Squares</span></span><small>Computer Aided Design and Information Technology Laboratory, SNU · Aug 2020 – Feb 2021 · UROP</small></span><span class="toggle-icon" aria-hidden="true"></span></summary><div class="simulation-content mini-case">
+<figure class="mini-figure"><img src="assets/additional-graph-slam.png" alt="Three plots from 2D LiDAR data: the occupancy map with the estimated trajectory, the trajectory with detected loops marked, and the trajectory after pose-graph optimization" loading="lazy" width="1600" height="572"><figcaption>The left panel shows the map (magenta) and trajectory (green) from occupancy-grid SLAM, the middle panel marks detected loops (×), and the right panel shows the trajectory after the second graph optimization.</figcaption></figure>
+<p class="mini-takeaway">Loop closure and graph optimization refine the scan-matching trajectory into the estimate that minimizes error over all constraints.</p>
+<div class="mini-grid">
+<div><h4>Problem</h4><p>A robot must estimate its path and a map together from noisy 2D LiDAR scans, and filtering methods accumulate error over wide areas.</p></div>
+<div><h4>Approach</h4><p>In the front-end, occupancy-grid scan matching builds a pose graph and loop detection adds edges at revisited places. In the back-end, the graph is optimized by iterative local linearization of the least-squares error.</p></div>
+<div><h4>Result</h4><p>On 2D LiDAR data collected in the SNU Central Library, loop constraints adjusted the trajectory, and it stopped changing after the second optimization.</p></div>
+</div>
+<div class="case-links"><a href="https://github.com/yerinkim-yk/2d-Lidar-Graph-SLAM" target="_blank" rel="noreferrer">Code</a><a href="assets/slides-graph-slam.pdf" target="_blank" rel="noreferrer">Slides</a></div>
+</div></details>
+</section>
 <div class="project-end"><p>For publications, experience, and education, see my <a href="cv">CV</a>.</p><a href="#main">Back to top</a></div>
 </main><footer><p>© 2026 Yerin Kim</p></footer>
 <script data-goatcounter="https://yerinkim.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
@@ -145,5 +183,7 @@ document.addEventListener('click', event => {
 });
 window.addEventListener('hashchange', () => revealLinkedSection(location.hash));
 revealLinkedSection(location.hash);
+// Re-scroll once images above have loaded, so a deep link lands on its section.
+window.addEventListener('load', () => revealLinkedSection(location.hash));
 </script>
 </body></html>
