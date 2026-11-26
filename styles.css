@@ -69,6 +69,7 @@ figcaption { margin-top: 8px; color: var(--muted); font-size: 12px; }
 .earlier-research .eyebrow { margin-top: 4px; }
 .earlier-research h3 { font-size: 18px; }
 .earlier-research p { margin: 9px 0 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
+.earlier-research .project-links { margin-top: 12px; gap: 6px 16px; font-size: 13px; color: inherit; }
 
 .publication-list { margin: 0; padding: 0; list-style: none; counter-reset: publications; }
 .publication-list li { position: relative; padding: 0 0 28px 34px; counter-increment: publications; }
